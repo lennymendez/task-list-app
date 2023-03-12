@@ -1,0 +1,12 @@
+{
+    "head": {
+        "'title": "Task List App",
+        "favicon": {
+            "rel": "icon",
+            "href": "/favicon.png"
+        }
+    },
+    "logo": "TASK LIST APP",
+    "log_out": "LOG OUT",
+    "sign_in": "GET STARTED"
+}
