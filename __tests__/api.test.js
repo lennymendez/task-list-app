@@ -6,7 +6,7 @@ const getUser = async () => {
         },
         body: JSON.stringify({ user: { email: 'test-user@mail.com' }})
     }
-    const response = await fetch(process.env.DB_GET_USER_ENDPOINT || '', options)
+    const response = await fetch('http://localhost:3002/db/get-user', options)
     return await response.json()
 }
 
@@ -18,7 +18,7 @@ const createUser = async () => {
         },
         body: JSON.stringify({ user: { email: 'test-user@mail.com' }, tasks: [] })
     }
-    const response = await fetch(process.env.DB_CREATE_USER_ENDPOINT || '', options)
+    const response = await fetch('http://localhost:3002/db/create-user', options)
     return await response.json()
 }
 
@@ -33,7 +33,7 @@ const updateUser = async () => {
             tasks: [{ id: 1, text: 'This is a test', completed: false }]
         })
     }
-    const response = await fetch(process.env.DB_UPDATE_USER_ENDPOINT || '', options)
+    const response = await fetch('http://localhost:3002/db/update-user', options)
     return await response.json()
 }
 

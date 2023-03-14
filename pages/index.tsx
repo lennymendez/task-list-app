@@ -47,6 +47,7 @@ export default function Home({ providers }: HomeProps): JSX.Element {
 
   // Update db everytime the todos state get updated
   useEffect(() => {
+    console.log('foo: ', process.env.NEXT_PUBLIC_DB_UPDATE_USER_ENDPOINT)
     if (session) {
       const updateUser = () => {
         const options = {
@@ -56,7 +57,7 @@ export default function Home({ providers }: HomeProps): JSX.Element {
           },
           body: JSON.stringify({ user: session.user, tasks: todos }),
         }
-        fetch(process.env.DB_UPDATE_USER_ENDPOINT || '', options)
+        fetch(process.env.NEXT_PUBLIC_DB_UPDATE_USER_ENDPOINT || '', options)
       }
 
       updateUser()
@@ -75,7 +76,7 @@ export default function Home({ providers }: HomeProps): JSX.Element {
             },
             body: JSON.stringify({ user: session?.user, tasks: todos }),
           }
-          fetch(process.env.DB_CREATE_USER_ENDPOINT || '', options)
+          fetch(process.env.NEXT_PUBLIC_DB_CREATE_USER_ENDPOINT || '', options)
         }
         setInitialized(true)
       }
@@ -90,7 +91,7 @@ export default function Home({ providers }: HomeProps): JSX.Element {
             body: JSON.stringify({ user: session?.user }),
           }
           const response = await fetch(
-            process.env.DB_GET_USER_ENDPOINT || '',
+            process.env.NEXT_PUBLIC_DB_GET_USER_ENDPOINT || '',
             options
           )
           const data = await response.json()
