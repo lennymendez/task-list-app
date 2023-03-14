@@ -47,7 +47,6 @@ export default function Home({ providers }: HomeProps): JSX.Element {
 
   // Update db everytime the todos state get updated
   useEffect(() => {
-    console.log('foo: ', process.env.NEXT_PUBLIC_DB_UPDATE_USER_ENDPOINT)
     if (session) {
       const updateUser = () => {
         const options = {
