@@ -18,6 +18,5 @@ module.exports = {
         'tl-hover': '#dbaddf'
       }
     },
-  },
-  plugins: [],
+  }
 }

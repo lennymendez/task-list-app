@@ -8,5 +8,20 @@
     },
     "logo": "TASK LIST APP",
     "log_out": "LOG OUT",
-    "sign_in": "GET STARTED"
+    "sign_in": "GET STARTED",
+    "task_list": {
+        "input_text_placeholder": "Enter a new task...",
+        "button_add_task": "ADD"
+    },
+    "landing_text": "Stay on top of your daily task and improve productivity",
+    "status": {
+        "loading": "loading",
+        "authenticated": "authenticated"
+    },
+    "loading": "Loading...",
+    "footer": {
+        "href": "https://lennydev.io",
+        "src": "/logos/lennydev-logo.png",
+        "alt": "Lenny Dev Logo"
+    }
 }
