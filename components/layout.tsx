@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { useSession, signOut } from 'next-auth/react'
+import Image from 'next/image'
 import Default from '@/utils/default.json'
 
 interface LayoutProps {
@@ -60,13 +61,16 @@ export default function Layout({ children }: LayoutProps = {}) {
           href={Default.footer.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-16 flex flex-row justify-center w-full"
+          className="pb-16 w-full flex justify-center"
         >
-          <img
-            src={Default.footer.src}
-            className="w-28 lg:w-36 h-auto"
-            alt={Default.footer.alt}
-          />
+          <div className="w-28 h-28 md:w-32 md:h-32 absolute">
+            <Image
+              src={Default.footer.src}
+              alt={Default.footer.alt}
+              className="object-contain"
+              fill
+            />
+          </div>
         </a>
       </footer>
     </>
