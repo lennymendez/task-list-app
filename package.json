@@ -29,5 +29,6 @@
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "ts-jest": "^29.0.5"
-  }
+  },
+  "proxy": "https://task-list-api.vercel.app"
 }

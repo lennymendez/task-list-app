@@ -69,6 +69,7 @@ export default function Layout({ children }: LayoutProps = {}) {
               alt={Default.footer.alt}
               className="object-contain"
               fill
+              sizes="33vw"
             />
           </div>
         </a>
